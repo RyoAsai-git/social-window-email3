@@ -5,7 +5,7 @@ class InquiryMailer < ApplicationMailer
   #
   #   en.inquiry_mailer.received_email.subject
   #
-  def received_email
+  def received_email(user)
     @user = user
     mail to: @user.email,
          subject: "【#{@user.name}様の社会の窓についてお知らせがあります】"
